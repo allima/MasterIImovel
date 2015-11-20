@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Home.dao;
+using Home.modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +30,26 @@ namespace Home
             InitializeComponent();
             this.codigo = codigo;
             this.operacao = "alt-exc";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormImovelmanutencao_Load(object sender, EventArgs e)
+        {
+            if (operacao == "alt-exc")
+            {// Se a operacao for de alteracao ou exclusao. 
+             // Chama o metodo Consultar da classe CargosOperacoes. 
+                Imovel imovel = ImovelOperacao.Consultar(codigo);
+                txtb_decricao.Text = imovel.Decricao.ToString();
+                txtb_endereco.Text = imovel.Endereco.ToString();
+                mktxtb_valor.Text = imovel.Valor.ToString();
+                mktxtb_valoraluguel.Text = imovel.Valor_aluguel.ToString();
+                cobbox_tipo.Text = imovel.Tipo_imovel.ToString();
+                
+            }
         }
     }
 }
