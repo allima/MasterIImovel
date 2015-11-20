@@ -64,6 +64,7 @@
             this.imovelToolStripMenuItem.Name = "imovelToolStripMenuItem";
             this.imovelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.imovelToolStripMenuItem.Text = "Imovel";
+            this.imovelToolStripMenuItem.Click += new System.EventHandler(this.imovelToolStripMenuItem_Click);
             // 
             // corretorToolStripMenuItem
             // 
