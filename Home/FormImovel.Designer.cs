@@ -29,11 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.masterimovelDataSet = new Home.masterimovelDataSet();
-            this.imovelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.imovelTableAdapter = new Home.masterimovelDataSetTableAdapters.imovelTableAdapter();
+            this.dgv_imovel = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.decricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,17 +37,21 @@
             this.valoraluguelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idadeimoveldtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoimovelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imovelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.masterimovelDataSet = new Home.masterimovelDataSet();
+            this.label1 = new System.Windows.Forms.Label();
+            this.imovelTableAdapter = new Home.masterimovelDataSetTableAdapters.imovelTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_imovel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imovelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgv_imovel
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_imovel.AutoGenerateColumns = false;
+            this.dgv_imovel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_imovel.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.decricaoDataGridViewTextBoxColumn,
             this.enderecoDataGridViewTextBoxColumn,
@@ -59,35 +59,12 @@
             this.valoraluguelDataGridViewTextBoxColumn,
             this.idadeimoveldtDataGridViewTextBoxColumn,
             this.tipoimovelDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.imovelBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(33, 70);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(743, 219);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(68, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Cadastro de Imovies";
-            // 
-            // masterimovelDataSet
-            // 
-            this.masterimovelDataSet.DataSetName = "masterimovelDataSet";
-            this.masterimovelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // imovelBindingSource
-            // 
-            this.imovelBindingSource.DataMember = "imovel";
-            this.imovelBindingSource.DataSource = this.masterimovelDataSet;
-            // 
-            // imovelTableAdapter
-            // 
-            this.imovelTableAdapter.ClearBeforeFill = true;
+            this.dgv_imovel.DataSource = this.imovelBindingSource;
+            this.dgv_imovel.Location = new System.Drawing.Point(33, 70);
+            this.dgv_imovel.Name = "dgv_imovel";
+            this.dgv_imovel.Size = new System.Drawing.Size(743, 219);
+            this.dgv_imovel.TabIndex = 0;
+            this.dgv_imovel.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -132,6 +109,30 @@
             this.tipoimovelDataGridViewTextBoxColumn.HeaderText = "Tipo";
             this.tipoimovelDataGridViewTextBoxColumn.Name = "tipoimovelDataGridViewTextBoxColumn";
             // 
+            // imovelBindingSource
+            // 
+            this.imovelBindingSource.DataMember = "imovel";
+            this.imovelBindingSource.DataSource = this.masterimovelDataSet;
+            // 
+            // masterimovelDataSet
+            // 
+            this.masterimovelDataSet.DataSetName = "masterimovelDataSet";
+            this.masterimovelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(68, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(203, 24);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Cadastro de Imovies";
+            // 
+            // imovelTableAdapter
+            // 
+            this.imovelTableAdapter.ClearBeforeFill = true;
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(53, 330);
@@ -149,13 +150,13 @@
             this.ClientSize = new System.Drawing.Size(900, 392);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_imovel);
             this.Name = "FormImovel";
             this.Text = "Imovel";
             this.Load += new System.EventHandler(this.FormImovel_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_imovel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imovelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,7 +164,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_imovel;
         private System.Windows.Forms.Label label1;
         private masterimovelDataSet masterimovelDataSet;
         private System.Windows.Forms.BindingSource imovelBindingSource;

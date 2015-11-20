@@ -69,6 +69,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>masterimovelDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="modelo\Imovel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
