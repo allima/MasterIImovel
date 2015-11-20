@@ -26,7 +26,8 @@ namespace Home
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            FormImovelmanutencao formImovelmanutencao = new FormImovelmanutencao();
+            formImovelmanutencao.ShowDialog(this);
         }
     }
 }
