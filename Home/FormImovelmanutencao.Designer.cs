@@ -42,6 +42,8 @@
             this.mktxtb_valor = new System.Windows.Forms.MaskedTextBox();
             this.mktxtb_valoraluguel = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -67,14 +69,14 @@
             "Loft",
             "Loteamento/Condomínio",
             "Terreno Padrão"});
-            this.cobbox_tipo.Location = new System.Drawing.Point(166, 194);
+            this.cobbox_tipo.Location = new System.Drawing.Point(185, 219);
             this.cobbox_tipo.Name = "cobbox_tipo";
             this.cobbox_tipo.Size = new System.Drawing.Size(203, 21);
             this.cobbox_tipo.TabIndex = 1;
             // 
             // txtb_decricao
             // 
-            this.txtb_decricao.Location = new System.Drawing.Point(166, 49);
+            this.txtb_decricao.Location = new System.Drawing.Point(185, 49);
             this.txtb_decricao.Name = "txtb_decricao";
             this.txtb_decricao.Size = new System.Drawing.Size(256, 20);
             this.txtb_decricao.TabIndex = 2;
@@ -90,7 +92,7 @@
             // 
             // txtb_endereco
             // 
-            this.txtb_endereco.Location = new System.Drawing.Point(166, 81);
+            this.txtb_endereco.Location = new System.Drawing.Point(185, 82);
             this.txtb_endereco.Name = "txtb_endereco";
             this.txtb_endereco.Size = new System.Drawing.Size(256, 20);
             this.txtb_endereco.TabIndex = 4;
@@ -98,7 +100,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(78, 197);
+            this.label3.Location = new System.Drawing.Point(78, 219);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 5;
@@ -106,7 +108,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(121, 245);
+            this.button1.Location = new System.Drawing.Point(106, 273);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 6;
@@ -116,7 +118,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(244, 245);
+            this.button2.Location = new System.Drawing.Point(229, 273);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 7;
@@ -125,7 +127,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(362, 245);
+            this.button3.Location = new System.Drawing.Point(347, 273);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 8;
@@ -145,7 +147,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(75, 123);
+            this.label5.Location = new System.Drawing.Point(75, 148);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(31, 13);
             this.label5.TabIndex = 10;
@@ -153,16 +155,16 @@
             // 
             // mktxtb_valor
             // 
-            this.mktxtb_valor.Location = new System.Drawing.Point(166, 123);
-            this.mktxtb_valor.Mask = "000.000.000,00";
+            this.mktxtb_valor.Location = new System.Drawing.Point(185, 148);
+            this.mktxtb_valor.Mask = "000000000000";
             this.mktxtb_valor.Name = "mktxtb_valor";
             this.mktxtb_valor.Size = new System.Drawing.Size(203, 20);
             this.mktxtb_valor.TabIndex = 11;
             // 
             // mktxtb_valoraluguel
             // 
-            this.mktxtb_valoraluguel.Location = new System.Drawing.Point(166, 150);
-            this.mktxtb_valoraluguel.Mask = "000.000.000,00";
+            this.mktxtb_valoraluguel.Location = new System.Drawing.Point(185, 179);
+            this.mktxtb_valoraluguel.Mask = "0000000000000";
             this.mktxtb_valoraluguel.Name = "mktxtb_valoraluguel";
             this.mktxtb_valoraluguel.Size = new System.Drawing.Size(203, 20);
             this.mktxtb_valoraluguel.TabIndex = 12;
@@ -170,17 +172,39 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(75, 157);
+            this.label6.Location = new System.Drawing.Point(75, 179);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 13);
             this.label6.TabIndex = 13;
             this.label6.Text = "Valor Aluguel";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Checked = false;
+            this.dateTimePicker1.CustomFormat = "";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(185, 114);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(80, 20);
+            this.dateTimePicker1.TabIndex = 14;
+            this.dateTimePicker1.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(78, 114);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(87, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Data Construção";
             // 
             // FormImovelmanutencao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(519, 317);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.mktxtb_valoraluguel);
             this.Controls.Add(this.mktxtb_valor);
@@ -219,5 +243,7 @@
         private System.Windows.Forms.MaskedTextBox mktxtb_valor;
         private System.Windows.Forms.MaskedTextBox mktxtb_valoraluguel;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label7;
     }
 }

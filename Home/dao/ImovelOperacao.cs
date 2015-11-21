@@ -19,10 +19,20 @@ namespace Home.dao
         {
 
             SqlConnection conexao = new SqlConnection(stringConexao); // Define a conexao com o banco de dados. 
-            string comando = @"insert aluguel values (" + // Instruc5o SQL a ser executada.
-                                                          //    imovel.Decricao + "'," +
-                                                          // imovel.Inquilino.Id + "'," +
-            imovel.Decricao + "')";
+            string comando = @"insert INTO imovel
+                                                 (decricao
+                                                 ,endereco
+                                                 ,valor_imovel
+                                                 ,valor_aluguel
+                                                 ,idade_imovel_dt
+                                                 ,tipo_imovel) VALUES
+                                                 (" + // Instruc5o SQL a ser executada.
+                                                          "'" + imovel.Decricao + "'," +
+                                                          "'" + imovel.Endereco + "'," +
+                                                          "'" + imovel.Valor + "'," +
+                                                          "'" + imovel.Valor_aluguel + "'," +
+                                                          "'" + imovel.Idade_imovel_dt + "','" +
+                                                                imovel.Tipo_imovel + "')";
             conexao.Open(); // Abre a conexao com o banco de dados.
                             // Determina a instruc5o SQL e a string de conexio a ser usada. 
             SqlCommand sql = new SqlCommand(comando, conexao);
@@ -36,6 +46,7 @@ namespace Home.dao
             string comando = @"update imovel set " + // Instrucao SQL a ser executada. 
                                                          "decricao = '" + imovel.Decricao + "', " +
                                                          "valor_imovel = '" + imovel.Valor + "'" +
+                                                         "tipi = '" + imovel.Valor + "'" +
                                                          "valor_aluguel = '" + imovel.Valor_aluguel + "', " +
                 "where id = " + imovel.Id;
             conexao.Open(); // Abre a conexao com o banco de dados.

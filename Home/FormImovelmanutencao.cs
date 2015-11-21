@@ -34,7 +34,29 @@ namespace Home
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Imovel imovel = new Imovel(); // Instancia a classe Cargos. 
+                                          // Atribui o valor do campo "Nome do Cargo" ao atributo "nome" da classe Cargos. 
+            imovel.Decricao = txtb_decricao.Text; // Atribui o valor do campo "Departamento" ao atributo "depto" da classe Cargos. 
+            imovel.Endereco = txtb_endereco.Text;
+            imovel.Valor = double.Parse(mktxtb_valor.Text);
+            imovel.Valor_aluguel = double.Parse(mktxtb_valoraluguel.Text);
+            imovel.Tipo_imovel = cobbox_tipo.SelectedIndex.ToString();
 
+
+            if (operacao == "inc")
+            { // Se operacao for de inclusao. 
+              // Chama o metodo Incluir da classe CargosOperacoes, passando como argumento
+              // contendo os dados do cargo a ser incluido. 
+                ImovelOperacao.Incluir(imovel);
+            }
+            else
+            { // Se operacao for de alteracao. 
+              // Atribui o valor do campo "Cadigo" (recebido pelo construtor) ao atributo ' 
+                imovel.Id = codigo; // Chama o metodo Alterar da classe CargosOperacoes, passando como argumento
+                                    // contendo os dados do cargo a ser alterado. 
+                ImovelOperacao.Alterar(imovel);
+            }
+            this.Close(); // Fecha o formulario de manutencao apps salvar. 
         }
 
         private void FormImovelmanutencao_Load(object sender, EventArgs e)
@@ -47,8 +69,8 @@ namespace Home
                 txtb_endereco.Text = imovel.Endereco.ToString();
                 mktxtb_valor.Text = imovel.Valor.ToString();
                 mktxtb_valoraluguel.Text = imovel.Valor_aluguel.ToString();
-                cobbox_tipo.Text = imovel.Tipo_imovel.ToString();
-                
+                cobbox_tipo.SelectedIndex = int.Parse(imovel.Tipo_imovel.ToString());
+
             }
         }
     }
