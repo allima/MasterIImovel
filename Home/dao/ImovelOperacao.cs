@@ -45,10 +45,12 @@ namespace Home.dao
             SqlConnection conexao = new SqlConnection(stringConexao); // Define a conexao com o banco de dados. 
             string comando = @"update imovel set " + // Instrucao SQL a ser executada. 
                                                          "decricao = '" + imovel.Decricao + "', " +
+                                                         "endereco = '" + imovel.Endereco + "'" +
                                                          "valor_imovel = '" + imovel.Valor + "'" +
-                                                         "tipi = '" + imovel.Valor + "'" +
-                                                         "valor_aluguel = '" + imovel.Valor_aluguel + "', " +
-                "where id = " + imovel.Id;
+                                                         "valor_aluguel = '" + imovel.Valor_aluguel + "'" +
+                                                         "idade_imovel_dt = '" + imovel.Idade_imovel_dt + "'" +
+                                                         "tipo_imovel = '" + imovel.Tipo_imovel + "'" +
+                                                         "where id = " + imovel.Id;
             conexao.Open(); // Abre a conexao com o banco de dados.
                             // Determina a instrucao SQL e a string de conexao a ser usada.
             SqlCommand sql = new SqlCommand(comando, conexao);
@@ -56,11 +58,11 @@ namespace Home.dao
             conexao.Close(); // Fecha a conexao com o banco de dados. 
         }
 
-        public static void Excluir(Imovel imovel)
+        public static void Excluir(int codigo)
         {
             SqlConnection conexao = new SqlConnection(stringConexao); // Define a conexao com o banco de dados.
             string comando = @"delete from aluguel where id = " +  // Instrucao SQL a ser executada. 
-                imovel.Id.ToString();
+                codigo.ToString();
             conexao.Open(); // Abre a conexao com o banco de dados. 
                             // Determina a instruc5o SQL e a string de conexao a ser usada.
             SqlCommand sql = new SqlCommand(comando, conexao);
@@ -73,7 +75,7 @@ namespace Home.dao
         {
             Imovel imovel = new Imovel(); // Instancia a classe Cargos. 
             SqlConnection conexao = new SqlConnection(stringConexao); // Define a conexao com o banco de dados.
-            string comando = "select * from aluguel where IDCargo = " + // Instrucao SQL a ser executada.
+            string comando = "select * from imovel where id = " + // Instrucao SQL a ser executada.
             codigo.ToString();
             conexao.Open(); // Abre a conexao com o banco de dados. 
                             // Determina a instrucao SQL e a string de conexao a ser usada.

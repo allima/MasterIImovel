@@ -42,8 +42,8 @@
             this.mktxtb_valor = new System.Windows.Forms.MaskedTextBox();
             this.mktxtb_valoraluguel = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
+            this.dtpkdata = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -124,6 +124,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Excluir";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -178,17 +179,6 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Valor Aluguel";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Checked = false;
-            this.dateTimePicker1.CustomFormat = "";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(185, 114);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(80, 20);
-            this.dateTimePicker1.TabIndex = 14;
-            this.dateTimePicker1.Visible = false;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -198,13 +188,21 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Data Construção";
             // 
+            // dtpkdata
+            // 
+            this.dtpkdata.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpkdata.Location = new System.Drawing.Point(188, 114);
+            this.dtpkdata.Name = "dtpkdata";
+            this.dtpkdata.Size = new System.Drawing.Size(200, 20);
+            this.dtpkdata.TabIndex = 16;
+            // 
             // FormImovelmanutencao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(519, 317);
+            this.Controls.Add(this.dtpkdata);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.mktxtb_valoraluguel);
             this.Controls.Add(this.mktxtb_valor);
@@ -243,7 +241,7 @@
         private System.Windows.Forms.MaskedTextBox mktxtb_valor;
         private System.Windows.Forms.MaskedTextBox mktxtb_valoraluguel;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dtpkdata;
     }
 }

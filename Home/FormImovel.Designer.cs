@@ -153,6 +153,7 @@
             this.Controls.Add(this.dgv_imovel);
             this.Name = "FormImovel";
             this.Text = "Imovel";
+            this.Activated += new System.EventHandler(this.FormImovel_Activated);
             this.Load += new System.EventHandler(this.FormImovel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_imovel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imovelBindingSource)).EndInit();

@@ -38,6 +38,7 @@ namespace Home
                                           // Atribui o valor do campo "Nome do Cargo" ao atributo "nome" da classe Cargos. 
             imovel.Decricao = txtb_decricao.Text; // Atribui o valor do campo "Departamento" ao atributo "depto" da classe Cargos. 
             imovel.Endereco = txtb_endereco.Text;
+            imovel.Idade_imovel_dt = dtpkdata.Value;
             imovel.Valor = double.Parse(mktxtb_valor.Text);
             imovel.Valor_aluguel = double.Parse(mktxtb_valoraluguel.Text);
             imovel.Tipo_imovel = cobbox_tipo.SelectedIndex.ToString();
@@ -68,9 +69,22 @@ namespace Home
                 txtb_decricao.Text = imovel.Decricao.ToString();
                 txtb_endereco.Text = imovel.Endereco.ToString();
                 mktxtb_valor.Text = imovel.Valor.ToString();
+                dtpkdata.Value = imovel.Idade_imovel_dt;
                 mktxtb_valoraluguel.Text = imovel.Valor_aluguel.ToString();
                 cobbox_tipo.SelectedIndex = int.Parse(imovel.Tipo_imovel.ToString());
 
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Emite uma mensagem para confirmacao da exclus5o. 
+            if (MessageBox.Show("Confirma a exclusgo deste cargo?", "Atencão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                // Chama o metodo Excluir da classe CargosOperacoes,
+                // passando como argumento o cedigo do cargo a ser excluido.
+                ImovelOperacao.Excluir(codigo);
+                this.Close(); // Fecha o formulario de manutenc5o apes excluir. 
             }
         }
     }

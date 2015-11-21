@@ -20,7 +20,7 @@ namespace Home
         private void FormImovel_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'masterimovelDataSet.imovel' table. You can move, or remove it, as needed.
-            this.imovelTableAdapter.Fill(this.masterimovelDataSet.imovel);
+           // this.imovelTableAdapter.Fill(this.masterimovelDataSet.imovel);
 
         }
 
@@ -38,6 +38,12 @@ namespace Home
             // Instancia a clesse FormeClasseManutencao enviando o codigo da classe como argumento
             FormImovelmanutencao FormImovelmanutencao = new FormImovelmanutencao(codigo);
             FormImovelmanutencao.ShowDialog(this);
+        }
+
+        private void FormImovel_Activated(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'masterimovelDataSet.imovel' table. You can move, or remove it, as needed.
+            this.imovelTableAdapter.Fill(this.masterimovelDataSet.imovel);
         }
     }
 }
