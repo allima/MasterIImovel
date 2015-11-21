@@ -45,10 +45,10 @@ namespace Home.dao
             SqlConnection conexao = new SqlConnection(stringConexao); // Define a conexao com o banco de dados. 
             string comando = @"update imovel set " + // Instrucao SQL a ser executada. 
                                                          "decricao = '" + imovel.Decricao + "', " +
-                                                         "endereco = '" + imovel.Endereco + "'" +
-                                                         "valor_imovel = '" + imovel.Valor + "'" +
-                                                         "valor_aluguel = '" + imovel.Valor_aluguel + "'" +
-                                                         "idade_imovel_dt = '" + imovel.Idade_imovel_dt + "'" +
+                                                         "endereco = '" + imovel.Endereco + "'," +
+                                                         "valor_imovel = '" + imovel.Valor + "'," +
+                                                         "valor_aluguel = '" + imovel.Valor_aluguel + "'," +
+                                                         "idade_imovel_dt = '" + imovel.Idade_imovel_dt + "'," +
                                                          "tipo_imovel = '" + imovel.Tipo_imovel + "'" +
                                                          "where id = " + imovel.Id;
             conexao.Open(); // Abre a conexao com o banco de dados.
@@ -75,7 +75,7 @@ namespace Home.dao
         {
             Imovel imovel = new Imovel(); // Instancia a classe Cargos. 
             SqlConnection conexao = new SqlConnection(stringConexao); // Define a conexao com o banco de dados.
-            string comando = "select * from imovel where id = " + // Instrucao SQL a ser executada.
+            string comando = @"SELECT * FROM imovel where id = " + // Instrucao SQL a ser executada.
             codigo.ToString();
             conexao.Open(); // Abre a conexao com o banco de dados. 
                             // Determina a instrucao SQL e a string de conexao a ser usada.
@@ -89,8 +89,10 @@ namespace Home.dao
                                         // atribui este valor ao atributo "nome" da classe Cargos. 
             imovel.Decricao = dr.GetString(1); // Obtem o valor do campo "Departamento" da linha selecionada no DataGridView e 
                                                // atribui este valor ao atributo "depto" da classe Cargos.
-
-            dr.Close(); // Fecha o objeto Sq1DataReader.
+            imovel.Endereco = dr.GetString(2);
+            imovel.Valor = double.Parse(dr.GetSqlMoney(3));
+           // imovel.Valor_aluguel = dr.GetDouble(4);
+            dr.Close(); // Fecha o objeto SqlDataReader.
             conexao.Close(); // Fecha a conexao com o banco de dados.
             return (imovel);
             // Retorna o objeto cargos contendo os valores dos tras campos. 

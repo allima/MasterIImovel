@@ -39,11 +39,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.mktxtb_valor = new System.Windows.Forms.MaskedTextBox();
-            this.mktxtb_valoraluguel = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dtpkdata = new System.Windows.Forms.DateTimePicker();
+            this.mktxtb_valor = new System.Windows.Forms.TextBox();
+            this.mktxtb_valoraluguel = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -154,22 +154,6 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Valor";
             // 
-            // mktxtb_valor
-            // 
-            this.mktxtb_valor.Location = new System.Drawing.Point(185, 148);
-            this.mktxtb_valor.Mask = "000000000000";
-            this.mktxtb_valor.Name = "mktxtb_valor";
-            this.mktxtb_valor.Size = new System.Drawing.Size(203, 20);
-            this.mktxtb_valor.TabIndex = 11;
-            // 
-            // mktxtb_valoraluguel
-            // 
-            this.mktxtb_valoraluguel.Location = new System.Drawing.Point(185, 179);
-            this.mktxtb_valoraluguel.Mask = "0000000000000";
-            this.mktxtb_valoraluguel.Name = "mktxtb_valoraluguel";
-            this.mktxtb_valoraluguel.Size = new System.Drawing.Size(203, 20);
-            this.mktxtb_valoraluguel.TabIndex = 12;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -196,16 +180,30 @@
             this.dtpkdata.Size = new System.Drawing.Size(200, 20);
             this.dtpkdata.TabIndex = 16;
             // 
+            // mktxtb_valor
+            // 
+            this.mktxtb_valor.Location = new System.Drawing.Point(188, 145);
+            this.mktxtb_valor.Name = "mktxtb_valor";
+            this.mktxtb_valor.Size = new System.Drawing.Size(200, 20);
+            this.mktxtb_valor.TabIndex = 17;
+            // 
+            // mktxtb_valoraluguel
+            // 
+            this.mktxtb_valoraluguel.Location = new System.Drawing.Point(185, 176);
+            this.mktxtb_valoraluguel.Name = "mktxtb_valoraluguel";
+            this.mktxtb_valoraluguel.Size = new System.Drawing.Size(200, 20);
+            this.mktxtb_valoraluguel.TabIndex = 18;
+            // 
             // FormImovelmanutencao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(519, 317);
+            this.Controls.Add(this.mktxtb_valoraluguel);
+            this.Controls.Add(this.mktxtb_valor);
             this.Controls.Add(this.dtpkdata);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.mktxtb_valoraluguel);
-            this.Controls.Add(this.mktxtb_valor);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button3);
@@ -238,10 +236,10 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MaskedTextBox mktxtb_valor;
-        private System.Windows.Forms.MaskedTextBox mktxtb_valoraluguel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dtpkdata;
+        private System.Windows.Forms.TextBox mktxtb_valor;
+        private System.Windows.Forms.TextBox mktxtb_valoraluguel;
     }
 }
