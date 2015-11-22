@@ -49,5 +49,11 @@ namespace Home
             // TODO: This line of code loads data into the 'masterimovelDataSet.imovel' table. You can move, or remove it, as needed.
             this.imovelTableAdapter.Fill(this.masterimovelDataSet.imovel);
         }
+
+        private void btn_assc_imo_pes_Click(object sender, EventArgs e)
+        {
+            FormImovelProprietario FormImovelProprietario = new FormImovelProprietario();
+            FormImovelProprietario.ShowDialog(this);
+        }
     }
 }

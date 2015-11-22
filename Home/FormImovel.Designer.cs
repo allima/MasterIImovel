@@ -42,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.imovelTableAdapter = new Home.masterimovelDataSetTableAdapters.imovelTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
+            this.btn_assc_imo_pes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_imovel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imovelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).BeginInit();
@@ -143,11 +144,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btn_assc_imo_pes
+            // 
+            this.btn_assc_imo_pes.Location = new System.Drawing.Point(180, 330);
+            this.btn_assc_imo_pes.Name = "btn_assc_imo_pes";
+            this.btn_assc_imo_pes.Size = new System.Drawing.Size(137, 23);
+            this.btn_assc_imo_pes.TabIndex = 3;
+            this.btn_assc_imo_pes.Text = "Cadastrar Proprietario";
+            this.btn_assc_imo_pes.UseVisualStyleBackColor = true;
+            this.btn_assc_imo_pes.Click += new System.EventHandler(this.btn_assc_imo_pes_Click);
+            // 
             // FormImovel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 392);
+            this.Controls.Add(this.btn_assc_imo_pes);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgv_imovel);
@@ -178,5 +190,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idadeimoveldtDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoimovelDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_assc_imo_pes;
     }
 }
