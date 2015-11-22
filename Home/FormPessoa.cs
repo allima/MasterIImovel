@@ -26,6 +26,8 @@ namespace Home
 
         private void FormPessoa_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'masterimovelDataSet.proprietario_imovel' table. You can move, or remove it, as needed.
+          //  this.proprietario_imovelTableAdapter.Fill(this.masterimovelDataSet.proprietario_imovel);
             // TODO: This line of code loads data into the 'masterimovelDataSet.pessoa' table. You can move, or remove it, as needed.
             switch (tipo)
             {

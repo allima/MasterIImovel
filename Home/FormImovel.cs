@@ -19,8 +19,12 @@ namespace Home
 
         private void FormImovel_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'masterimovelDataSet.proprietario_imovel' table. You can move, or remove it, as needed.
+          //  this.proprietario_imovelTableAdapter.Fill(this.masterimovelDataSet.proprietario_imovel);
+            // TODO: This line of code loads data into the 'masterimovelDataSet.aluga_vende' table. You can move, or remove it, as needed.
+           // this.aluga_vendeTableAdapter.Fill(this.masterimovelDataSet.aluga_vende);
             // TODO: This line of code loads data into the 'masterimovelDataSet.imovel' table. You can move, or remove it, as needed.
-           // this.imovelTableAdapter.Fill(this.masterimovelDataSet.imovel);
+            // this.imovelTableAdapter.Fill(this.masterimovelDataSet.imovel);
 
         }
 
