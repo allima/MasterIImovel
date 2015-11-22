@@ -61,7 +61,7 @@ namespace Home.dao
         public static void Excluir(int codigo)
         {
             SqlConnection conexao = new SqlConnection(stringConexao); // Define a conexao com o banco de dados.
-            string comando = @"delete from aluguel where id = " +  // Instrucao SQL a ser executada. 
+            string comando = @"delete from imovel where id = " +  // Instrucao SQL a ser executada. 
                 codigo.ToString();
             conexao.Open(); // Abre a conexao com o banco de dados. 
                             // Determina a instruc5o SQL e a string de conexao a ser usada.
@@ -75,7 +75,7 @@ namespace Home.dao
         {
             Imovel imovel = new Imovel(); // Instancia a classe Cargos. 
             SqlConnection conexao = new SqlConnection(stringConexao); // Define a conexao com o banco de dados.
-            string comando = @"SELECT * FROM imovel where id = " + // Instrucao SQL a ser executada.
+            string comando = @" select * from imovel where id = " + // Instrucao SQL a ser executada.
             codigo.ToString();
             conexao.Open(); // Abre a conexao com o banco de dados. 
                             // Determina a instrucao SQL e a string de conexao a ser usada.
@@ -90,7 +90,8 @@ namespace Home.dao
             imovel.Decricao = dr.GetString(1); // Obtem o valor do campo "Departamento" da linha selecionada no DataGridView e 
                                                // atribui este valor ao atributo "depto" da classe Cargos.
             imovel.Endereco = dr.GetString(2);
-            imovel.Valor = double.Parse(dr.GetSqlMoney(3));
+            imovel.Idade_imovel_dt = dr.GetDateTime(3);
+           // imovel.Valor = dr.GetDouble(3);
            // imovel.Valor_aluguel = dr.GetDouble(4);
             dr.Close(); // Fecha o objeto SqlDataReader.
             conexao.Close(); // Fecha a conexao com o banco de dados.
