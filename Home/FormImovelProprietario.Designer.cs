@@ -49,7 +49,7 @@
             this.cbx_imovel.DataSource = this.imovelBindingSource;
             this.cbx_imovel.DisplayMember = "decricao";
             this.cbx_imovel.FormattingEnabled = true;
-            this.cbx_imovel.Location = new System.Drawing.Point(216, 77);
+            this.cbx_imovel.Location = new System.Drawing.Point(269, 95);
             this.cbx_imovel.Name = "cbx_imovel";
             this.cbx_imovel.Size = new System.Drawing.Size(121, 21);
             this.cbx_imovel.TabIndex = 0;
@@ -82,7 +82,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(78, 77);
+            this.label1.Location = new System.Drawing.Point(131, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 2;
@@ -91,7 +91,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(81, 137);
+            this.label2.Location = new System.Drawing.Point(134, 155);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 3;
@@ -102,7 +102,7 @@
             this.cbx_pessoa.DataSource = this.pessoaBindingSource;
             this.cbx_pessoa.DisplayMember = "nome";
             this.cbx_pessoa.FormattingEnabled = true;
-            this.cbx_pessoa.Location = new System.Drawing.Point(216, 134);
+            this.cbx_pessoa.Location = new System.Drawing.Point(269, 152);
             this.cbx_pessoa.Name = "cbx_pessoa";
             this.cbx_pessoa.Size = new System.Drawing.Size(121, 21);
             this.cbx_pessoa.TabIndex = 4;
