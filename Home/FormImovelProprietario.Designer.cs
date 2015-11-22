@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbx_imovel = new System.Windows.Forms.ComboBox();
             this.imovelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.masterimovelDataSet = new Home.masterimovelDataSet();
             this.imovelTableAdapter = new Home.masterimovelDataSetTableAdapters.imovelTableAdapter();
             this.btn_salvar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbx_pessoa = new System.Windows.Forms.ComboBox();
             this.pessoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pessoaTableAdapter = new Home.masterimovelDataSetTableAdapters.pessoaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.imovelBindingSource)).BeginInit();
@@ -44,16 +44,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pessoaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cbx_imovel
             // 
-            this.comboBox1.DataSource = this.imovelBindingSource;
-            this.comboBox1.DisplayMember = "decricao";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(216, 77);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.ValueMember = "id";
+            this.cbx_imovel.DataSource = this.imovelBindingSource;
+            this.cbx_imovel.DisplayMember = "decricao";
+            this.cbx_imovel.FormattingEnabled = true;
+            this.cbx_imovel.Location = new System.Drawing.Point(216, 77);
+            this.cbx_imovel.Name = "cbx_imovel";
+            this.cbx_imovel.Size = new System.Drawing.Size(121, 21);
+            this.cbx_imovel.TabIndex = 0;
+            this.cbx_imovel.ValueMember = "id";
             // 
             // imovelBindingSource
             // 
@@ -97,16 +97,16 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Proprietario";
             // 
-            // comboBox2
+            // cbx_pessoa
             // 
-            this.comboBox2.DataSource = this.pessoaBindingSource;
-            this.comboBox2.DisplayMember = "nome";
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(216, 134);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 4;
-            this.comboBox2.ValueMember = "id";
+            this.cbx_pessoa.DataSource = this.pessoaBindingSource;
+            this.cbx_pessoa.DisplayMember = "nome";
+            this.cbx_pessoa.FormattingEnabled = true;
+            this.cbx_pessoa.Location = new System.Drawing.Point(216, 134);
+            this.cbx_pessoa.Name = "cbx_pessoa";
+            this.cbx_pessoa.Size = new System.Drawing.Size(121, 21);
+            this.cbx_pessoa.TabIndex = 4;
+            this.cbx_pessoa.ValueMember = "id";
             // 
             // pessoaBindingSource
             // 
@@ -122,11 +122,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 374);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cbx_pessoa);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_salvar);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbx_imovel);
             this.Name = "FormImovelProprietario";
             this.Text = "FormImovelProprietario";
             this.Load += new System.EventHandler(this.FormImovelProprietario_Load);
@@ -140,14 +140,14 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbx_imovel;
         private masterimovelDataSet masterimovelDataSet;
         private System.Windows.Forms.BindingSource imovelBindingSource;
         private masterimovelDataSetTableAdapters.imovelTableAdapter imovelTableAdapter;
         private System.Windows.Forms.Button btn_salvar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbx_pessoa;
         private System.Windows.Forms.BindingSource pessoaBindingSource;
         private masterimovelDataSetTableAdapters.pessoaTableAdapter pessoaTableAdapter;
     }

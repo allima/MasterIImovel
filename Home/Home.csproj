@@ -47,8 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dao\Proprietario_ImovelOperacao.cs" />
     <Compile Include="dao\ImovelOperacao.cs" />
     <Compile Include="dao\PessoaOperacao.cs" />
+    <Compile Include="modelo\Proprietario_Imovel.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
