@@ -49,12 +49,13 @@ namespace Home
                     this.pessoaTableAdapter.Fill(this.masterimovelDataSet.pessoa);
                     break;
             }
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            FormPessoaManutencao formPessoaManutencao = new FormPessoaManutencao(tipo);
+            formPessoaManutencao.ShowDialog(this);
         }
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
@@ -63,8 +64,8 @@ namespace Home
             int codigo = Convert.ToInt32(dgv_pessoa.SelectedRows[0].Cells[0].Value.ToString());
 
             // Instancia a clesse FormeClasseManutencao enviando o codigo da classe como argumento
-            FormImovelmanutencao FormImovelmanutencao = new FormImovelmanutencao(codigo);
-            FormImovelmanutencao.ShowDialog(this);
+            FormPessoaManutencao formPessoaManutencao = new FormPessoaManutencao(tipo, codigo);
+            formPessoaManutencao.ShowDialog(this);
         }
     }
 }

@@ -15,6 +15,7 @@ namespace Home.modelo
         private string cpf;
         private string rg;
         private string telefone;
+        private char tipo;
 
         public int Id
         {
@@ -104,6 +105,19 @@ namespace Home.modelo
             set
             {
                 telefone = value;
+            }
+        }
+
+        public char Tipo
+        {
+            get
+            {
+                return tipo;
+            }
+
+            set
+            {
+                tipo = value;
             }
         }
     }
