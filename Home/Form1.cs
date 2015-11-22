@@ -22,5 +22,23 @@ namespace Home
             FormImovel formImovel = new FormImovel();
             formImovel.ShowDialog(this);
         }
+
+        private void inquilinoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormPessoa formPessoa = new FormPessoa('I');
+            formPessoa.ShowDialog(this);
+        }
+
+        private void corretorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormPessoa formPessoa = new FormPessoa('C');
+            formPessoa.ShowDialog(this);
+        }
+
+        private void proprietarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormPessoa formPessoa = new FormPessoa('P');
+            formPessoa.ShowDialog(this);
+        }
     }
 }

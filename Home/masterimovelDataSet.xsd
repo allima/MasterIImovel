@@ -196,7 +196,36 @@ SELECT id, nome, email, endereco, cpf, rg, telefone, tipo FROM pessoa WHERE (id 
               <Mapping SourceColumn="telefone" DataSetColumn="telefone" />
               <Mapping SourceColumn="tipo" DataSetColumn="tipo" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="masterimovelConnectionString (Settings)" DbObjectName="masterimovel.dbo.pessoa" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBya" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByInquilino" GeneratorSourceName="FillBya" GetMethodModifier="Public" GetMethodName="GetDataByInquilino" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByInquilino" UserSourceName="FillBya">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        id, nome, email, endereco, cpf, rg, telefone, tipo
+FROM            pessoa
+WHERE        (tipo = 'I')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="masterimovelConnectionString (Settings)" DbObjectName="masterimovel.dbo.pessoa" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByc" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByCorretor" GeneratorSourceName="FillByc" GetMethodModifier="Public" GetMethodName="GetDataByCorretor" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByCorretor" UserSourceName="FillByc">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT id, nome, email, endereco, cpf, rg, telefone, tipo FROM dbo.pessoa where tipo ='C'</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="masterimovelConnectionString (Settings)" DbObjectName="masterimovel.dbo.pessoa" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByp" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByProprietario" GeneratorSourceName="FillByp" GetMethodModifier="Public" GetMethodName="GetDataByProprietario" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByProprietario" UserSourceName="FillByp">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        id, nome, email, endereco, cpf, rg, telefone, tipo
+FROM            pessoa
+WHERE        (tipo = 'P')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="proprietario_imovelTableAdapter" GeneratorDataComponentClassName="proprietario_imovelTableAdapter" Name="proprietario_imovel" UserDataComponentName="proprietario_imovelTableAdapter">
             <MainSource>
@@ -258,7 +287,7 @@ SELECT id, id_imovel, id_proprietario FROM proprietario_imovel WHERE (id = @id)<
   <xs:element name="masterimovelDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="masterimovelDataSet" msprop:Generator_UserDSName="masterimovelDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="aluga_vende" msprop:Generator_TableClassName="aluga_vendeDataTable" msprop:Generator_TableVarName="tablealuga_vende" msprop:Generator_TablePropName="aluga_vende" msprop:Generator_RowDeletingName="aluga_vendeRowDeleting" msprop:Generator_RowChangingName="aluga_vendeRowChanging" msprop:Generator_RowEvHandlerName="aluga_vendeRowChangeEventHandler" msprop:Generator_RowDeletedName="aluga_vendeRowDeleted" msprop:Generator_UserTableName="aluga_vende" msprop:Generator_RowChangedName="aluga_vendeRowChanged" msprop:Generator_RowEvArgName="aluga_vendeRowChangeEvent" msprop:Generator_RowClassName="aluga_vendeRow">
+        <xs:element name="aluga_vende" msprop:Generator_TableClassName="aluga_vendeDataTable" msprop:Generator_TableVarName="tablealuga_vende" msprop:Generator_RowChangedName="aluga_vendeRowChanged" msprop:Generator_TablePropName="aluga_vende" msprop:Generator_RowDeletingName="aluga_vendeRowDeleting" msprop:Generator_RowChangingName="aluga_vendeRowChanging" msprop:Generator_RowEvHandlerName="aluga_vendeRowChangeEventHandler" msprop:Generator_RowDeletedName="aluga_vendeRowDeleted" msprop:Generator_RowClassName="aluga_vendeRow" msprop:Generator_UserTableName="aluga_vende" msprop:Generator_RowEvArgName="aluga_vendeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" minOccurs="0" />
@@ -273,7 +302,7 @@ SELECT id, id_imovel, id_proprietario FROM proprietario_imovel WHERE (id = @id)<
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="imovel" msprop:Generator_TableClassName="imovelDataTable" msprop:Generator_TableVarName="tableimovel" msprop:Generator_TablePropName="imovel" msprop:Generator_RowDeletingName="imovelRowDeleting" msprop:Generator_RowChangingName="imovelRowChanging" msprop:Generator_RowEvHandlerName="imovelRowChangeEventHandler" msprop:Generator_RowDeletedName="imovelRowDeleted" msprop:Generator_UserTableName="imovel" msprop:Generator_RowChangedName="imovelRowChanged" msprop:Generator_RowEvArgName="imovelRowChangeEvent" msprop:Generator_RowClassName="imovelRow">
+        <xs:element name="imovel" msprop:Generator_TableClassName="imovelDataTable" msprop:Generator_TableVarName="tableimovel" msprop:Generator_RowChangedName="imovelRowChanged" msprop:Generator_TablePropName="imovel" msprop:Generator_RowDeletingName="imovelRowDeleting" msprop:Generator_RowChangingName="imovelRowChanging" msprop:Generator_RowEvHandlerName="imovelRowChangeEventHandler" msprop:Generator_RowDeletedName="imovelRowDeleted" msprop:Generator_RowClassName="imovelRow" msprop:Generator_UserTableName="imovel" msprop:Generator_RowEvArgName="imovelRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -304,7 +333,7 @@ SELECT id, id_imovel, id_proprietario FROM proprietario_imovel WHERE (id = @id)<
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="pessoa" msprop:Generator_TableClassName="pessoaDataTable" msprop:Generator_TableVarName="tablepessoa" msprop:Generator_TablePropName="pessoa" msprop:Generator_RowDeletingName="pessoaRowDeleting" msprop:Generator_RowChangingName="pessoaRowChanging" msprop:Generator_RowEvHandlerName="pessoaRowChangeEventHandler" msprop:Generator_RowDeletedName="pessoaRowDeleted" msprop:Generator_UserTableName="pessoa" msprop:Generator_RowChangedName="pessoaRowChanged" msprop:Generator_RowEvArgName="pessoaRowChangeEvent" msprop:Generator_RowClassName="pessoaRow">
+        <xs:element name="pessoa" msprop:Generator_TableClassName="pessoaDataTable" msprop:Generator_TableVarName="tablepessoa" msprop:Generator_RowChangedName="pessoaRowChanged" msprop:Generator_TablePropName="pessoa" msprop:Generator_RowDeletingName="pessoaRowDeleting" msprop:Generator_RowChangingName="pessoaRowChanging" msprop:Generator_RowEvHandlerName="pessoaRowChangeEventHandler" msprop:Generator_RowDeletedName="pessoaRowDeleted" msprop:Generator_RowClassName="pessoaRow" msprop:Generator_UserTableName="pessoa" msprop:Generator_RowEvArgName="pessoaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -360,7 +389,7 @@ SELECT id, id_imovel, id_proprietario FROM proprietario_imovel WHERE (id = @id)<
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="proprietario_imovel" msprop:Generator_TableClassName="proprietario_imovelDataTable" msprop:Generator_TableVarName="tableproprietario_imovel" msprop:Generator_TablePropName="proprietario_imovel" msprop:Generator_RowDeletingName="proprietario_imovelRowDeleting" msprop:Generator_RowChangingName="proprietario_imovelRowChanging" msprop:Generator_RowEvHandlerName="proprietario_imovelRowChangeEventHandler" msprop:Generator_RowDeletedName="proprietario_imovelRowDeleted" msprop:Generator_UserTableName="proprietario_imovel" msprop:Generator_RowChangedName="proprietario_imovelRowChanged" msprop:Generator_RowEvArgName="proprietario_imovelRowChangeEvent" msprop:Generator_RowClassName="proprietario_imovelRow">
+        <xs:element name="proprietario_imovel" msprop:Generator_TableClassName="proprietario_imovelDataTable" msprop:Generator_TableVarName="tableproprietario_imovel" msprop:Generator_RowChangedName="proprietario_imovelRowChanged" msprop:Generator_TablePropName="proprietario_imovel" msprop:Generator_RowDeletingName="proprietario_imovelRowDeleting" msprop:Generator_RowChangingName="proprietario_imovelRowChanging" msprop:Generator_RowEvHandlerName="proprietario_imovelRowChangeEventHandler" msprop:Generator_RowDeletedName="proprietario_imovelRowDeleted" msprop:Generator_RowClassName="proprietario_imovelRow" msprop:Generator_UserTableName="proprietario_imovel" msprop:Generator_RowEvArgName="proprietario_imovelRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -386,11 +415,11 @@ SELECT id, id_imovel, id_proprietario FROM proprietario_imovel WHERE (id = @id)<
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="loccorretor_fk" msdata:parent="pessoa" msdata:child="aluga_vende" msdata:parentkey="id" msdata:childkey="id_corretor" msprop:Generator_UserChildTable="aluga_vende" msprop:Generator_ChildPropName="Getaluga_vendeRowsByloccorretor_fk" msprop:Generator_UserRelationName="loccorretor_fk" msprop:Generator_RelationVarName="relationloccorretor_fk" msprop:Generator_UserParentTable="pessoa" msprop:Generator_ParentPropName="pessoaRowByloccorretor_fk" />
-      <msdata:Relationship name="locimovel_fk" msdata:parent="imovel" msdata:child="aluga_vende" msdata:parentkey="id" msdata:childkey="id_imovel" msprop:Generator_UserChildTable="aluga_vende" msprop:Generator_ChildPropName="Getaluga_vendeRows" msprop:Generator_UserRelationName="locimovel_fk" msprop:Generator_RelationVarName="relationlocimovel_fk" msprop:Generator_UserParentTable="imovel" msprop:Generator_ParentPropName="imovelRow" />
-      <msdata:Relationship name="locinquilino_fk" msdata:parent="pessoa" msdata:child="aluga_vende" msdata:parentkey="id" msdata:childkey="id_inquilino" msprop:Generator_UserChildTable="aluga_vende" msprop:Generator_ChildPropName="Getaluga_vendeRowsBylocinquilino_fk" msprop:Generator_UserRelationName="locinquilino_fk" msprop:Generator_RelationVarName="relationlocinquilino_fk" msprop:Generator_UserParentTable="pessoa" msprop:Generator_ParentPropName="pessoaRowBylocinquilino_fk" />
-      <msdata:Relationship name="proimoimovel_fk" msdata:parent="imovel" msdata:child="proprietario_imovel" msdata:parentkey="id" msdata:childkey="id_imovel" msprop:Generator_UserChildTable="proprietario_imovel" msprop:Generator_ChildPropName="Getproprietario_imovelRows" msprop:Generator_UserRelationName="proimoimovel_fk" msprop:Generator_ParentPropName="imovelRow" msprop:Generator_RelationVarName="relationproimoimovel_fk" msprop:Generator_UserParentTable="imovel" />
-      <msdata:Relationship name="proimoproprietario_fk" msdata:parent="pessoa" msdata:child="proprietario_imovel" msdata:parentkey="id" msdata:childkey="id_proprietario" msprop:Generator_UserChildTable="proprietario_imovel" msprop:Generator_ChildPropName="Getproprietario_imovelRows" msprop:Generator_UserRelationName="proimoproprietario_fk" msprop:Generator_ParentPropName="pessoaRow" msprop:Generator_RelationVarName="relationproimoproprietario_fk" msprop:Generator_UserParentTable="pessoa" />
+      <msdata:Relationship name="loccorretor_fk" msdata:parent="pessoa" msdata:child="aluga_vende" msdata:parentkey="id" msdata:childkey="id_corretor" msprop:Generator_UserChildTable="aluga_vende" msprop:Generator_ChildPropName="Getaluga_vendeRowsByloccorretor_fk" msprop:Generator_UserRelationName="loccorretor_fk" msprop:Generator_ParentPropName="pessoaRowByloccorretor_fk" msprop:Generator_RelationVarName="relationloccorretor_fk" msprop:Generator_UserParentTable="pessoa" />
+      <msdata:Relationship name="locimovel_fk" msdata:parent="imovel" msdata:child="aluga_vende" msdata:parentkey="id" msdata:childkey="id_imovel" msprop:Generator_UserChildTable="aluga_vende" msprop:Generator_ChildPropName="Getaluga_vendeRows" msprop:Generator_UserRelationName="locimovel_fk" msprop:Generator_ParentPropName="imovelRow" msprop:Generator_RelationVarName="relationlocimovel_fk" msprop:Generator_UserParentTable="imovel" />
+      <msdata:Relationship name="locinquilino_fk" msdata:parent="pessoa" msdata:child="aluga_vende" msdata:parentkey="id" msdata:childkey="id_inquilino" msprop:Generator_UserChildTable="aluga_vende" msprop:Generator_ChildPropName="Getaluga_vendeRowsBylocinquilino_fk" msprop:Generator_UserRelationName="locinquilino_fk" msprop:Generator_ParentPropName="pessoaRowBylocinquilino_fk" msprop:Generator_RelationVarName="relationlocinquilino_fk" msprop:Generator_UserParentTable="pessoa" />
+      <msdata:Relationship name="proimoimovel_fk" msdata:parent="imovel" msdata:child="proprietario_imovel" msdata:parentkey="id" msdata:childkey="id_imovel" msprop:Generator_UserChildTable="proprietario_imovel" msprop:Generator_ChildPropName="Getproprietario_imovelRows" msprop:Generator_UserRelationName="proimoimovel_fk" msprop:Generator_RelationVarName="relationproimoimovel_fk" msprop:Generator_UserParentTable="imovel" msprop:Generator_ParentPropName="imovelRow" />
+      <msdata:Relationship name="proimoproprietario_fk" msdata:parent="pessoa" msdata:child="proprietario_imovel" msdata:parentkey="id" msdata:childkey="id_proprietario" msprop:Generator_UserChildTable="proprietario_imovel" msprop:Generator_ChildPropName="Getproprietario_imovelRows" msprop:Generator_UserRelationName="proimoproprietario_fk" msprop:Generator_RelationVarName="relationproimoproprietario_fk" msprop:Generator_UserParentTable="pessoa" msprop:Generator_ParentPropName="pessoaRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

@@ -85,7 +85,7 @@ namespace Home.dao
                        // atribui este valor ao atributo "id" da classe Cargos.
             corretor.Id = dr.GetInt32(0); // Obtem o valor do campo "Nome do Cargo" da linha selecionada no DataGridView e
                                           // atribui este valor ao atributo "nome" da classe Cargos. 
-                                          // corretor.Id = dr.GetInt32(1); // Obtem o valor do campo "Departamento" da linha selecionada no DataGridView e 
+                                          // Obtem o valor do campo "Departamento" da linha selecionada no DataGridView e 
                                           // atribui este valor ao atributo "depto" da classe Cargos.
             corretor.Nome = dr.GetString(2);
             corretor.Email = dr.GetString(3);
