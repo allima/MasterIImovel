@@ -73,6 +73,12 @@
     <Compile Include="FormPessoa.Designer.cs">
       <DependentUpon>FormPessoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPessoaManutencao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPessoaManutencao.Designer.cs">
+      <DependentUpon>FormPessoaManutencao.cs</DependentUpon>
+    </Compile>
     <Compile Include="masterimovelDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPessoa.resx">
       <DependentUpon>FormPessoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPessoaManutencao.resx">
+      <DependentUpon>FormPessoaManutencao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

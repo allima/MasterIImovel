@@ -32,29 +32,39 @@ namespace Home
                 case 'C':
                     //  Console.WriteLine("Case 1");
                     this.pessoaTableAdapter.FillByc(this.masterimovelDataSet.pessoa);//corretor
+                    this.Text = "Corretor";
                     break;
                 case 'P':
                     // Console.WriteLine("Case 2");
                     this.pessoaTableAdapter.FillByp(this.masterimovelDataSet.pessoa);//proprietario
+                    this.Text = "Proprietario";
                     break;
                 case 'I':
                     //   Console.WriteLine("Case 2");
                     this.pessoaTableAdapter.FillBya(this.masterimovelDataSet.pessoa);//inquilino
+                    this.Text = "Inquilino";
                     break;
                 default:
                     Console.WriteLine("full");
                     this.pessoaTableAdapter.Fill(this.masterimovelDataSet.pessoa);
                     break;
             }
-
-
-
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            // Obtem o codigo do do gride da linha selecionad pelo duplo clique.
+            int codigo = Convert.ToInt32(dgv_pessoa.SelectedRows[0].Cells[0].Value.ToString());
+
+            // Instancia a clesse FormeClasseManutencao enviando o codigo da classe como argumento
+            FormImovelmanutencao FormImovelmanutencao = new FormImovelmanutencao(codigo);
+            FormImovelmanutencao.ShowDialog(this);
         }
     }
 }

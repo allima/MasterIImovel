@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_pessoa = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,16 +41,16 @@
             this.masterimovelDataSet = new Home.masterimovelDataSet();
             this.pessoaTableAdapter = new Home.masterimovelDataSetTableAdapters.pessoaTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_pessoa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgv_pessoa
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_pessoa.AutoGenerateColumns = false;
+            this.dgv_pessoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_pessoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.nomeDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
@@ -58,11 +58,12 @@
             this.cpfDataGridViewTextBoxColumn,
             this.rgDataGridViewTextBoxColumn,
             this.telefoneDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.pessoaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(67, 45);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(859, 150);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv_pessoa.DataSource = this.pessoaBindingSource;
+            this.dgv_pessoa.Location = new System.Drawing.Point(67, 45);
+            this.dgv_pessoa.Name = "dgv_pessoa";
+            this.dgv_pessoa.Size = new System.Drawing.Size(859, 150);
+            this.dgv_pessoa.TabIndex = 0;
+            this.dgv_pessoa.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -137,11 +138,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(990, 389);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_pessoa);
             this.Name = "FormPessoa";
             this.Text = "FormPessoa";
             this.Load += new System.EventHandler(this.FormPessoa_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_pessoa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).EndInit();
             this.ResumeLayout(false);
@@ -150,7 +151,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_pessoa;
         private masterimovelDataSet masterimovelDataSet;
         private System.Windows.Forms.BindingSource pessoaBindingSource;
         private masterimovelDataSetTableAdapters.pessoaTableAdapter pessoaTableAdapter;
