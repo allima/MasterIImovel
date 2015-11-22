@@ -79,12 +79,12 @@ namespace Home
         private void button2_Click(object sender, EventArgs e)
         {
             // Emite uma mensagem para confirmacao da exclus5o. 
-            if (MessageBox.Show("Confirma a exclusgo deste cargo?", "Atencão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Confirma a exclusgo deste imovel?", "Atencão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 // Chama o metodo Excluir da classe CargosOperacoes,
                 // passando como argumento o cedigo do cargo a ser excluido.
                 ImovelOperacao.Excluir(codigo);
-                this.Close(); // Fecha o formulario de manutenc5o apes excluir. 
+                this.Close(); // Fecha o formulario de manutencão apes excluir. 
             }
         }
     }
