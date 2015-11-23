@@ -30,12 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgv_imovel = new System.Windows.Forms.DataGridView();
-            this.imovelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.masterimovelDataSet = new Home.masterimovelDataSet();
-            this.label1 = new System.Windows.Forms.Label();
-            this.imovelTableAdapter = new Home.masterimovelDataSetTableAdapters.imovelTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_assc_imo_pes = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.decricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +37,12 @@
             this.valoraluguelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idadeimoveldtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoimovelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imovelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.masterimovelDataSet = new Home.masterimovelDataSet();
+            this.label1 = new System.Windows.Forms.Label();
+            this.imovelTableAdapter = new Home.masterimovelDataSetTableAdapters.imovelTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_assc_imo_pes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_imovel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imovelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).BeginInit();
@@ -50,6 +50,8 @@
             // 
             // dgv_imovel
             // 
+            this.dgv_imovel.AllowUserToAddRows = false;
+            this.dgv_imovel.AllowUserToDeleteRows = false;
             this.dgv_imovel.AutoGenerateColumns = false;
             this.dgv_imovel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_imovel.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -63,9 +65,59 @@
             this.dgv_imovel.DataSource = this.imovelBindingSource;
             this.dgv_imovel.Location = new System.Drawing.Point(33, 70);
             this.dgv_imovel.Name = "dgv_imovel";
+            this.dgv_imovel.ReadOnly = true;
             this.dgv_imovel.Size = new System.Drawing.Size(755, 219);
             this.dgv_imovel.TabIndex = 0;
             this.dgv_imovel.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Codigo";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // decricaoDataGridViewTextBoxColumn
+            // 
+            this.decricaoDataGridViewTextBoxColumn.DataPropertyName = "decricao";
+            this.decricaoDataGridViewTextBoxColumn.HeaderText = "Decricao";
+            this.decricaoDataGridViewTextBoxColumn.Name = "decricaoDataGridViewTextBoxColumn";
+            this.decricaoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // enderecoDataGridViewTextBoxColumn
+            // 
+            this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "endereco";
+            this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereco";
+            this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
+            this.enderecoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // valorimovelDataGridViewTextBoxColumn
+            // 
+            this.valorimovelDataGridViewTextBoxColumn.DataPropertyName = "valor_imovel";
+            this.valorimovelDataGridViewTextBoxColumn.HeaderText = "Valor";
+            this.valorimovelDataGridViewTextBoxColumn.Name = "valorimovelDataGridViewTextBoxColumn";
+            this.valorimovelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // valoraluguelDataGridViewTextBoxColumn
+            // 
+            this.valoraluguelDataGridViewTextBoxColumn.DataPropertyName = "valor_aluguel";
+            this.valoraluguelDataGridViewTextBoxColumn.HeaderText = "Valor do Aluguel";
+            this.valoraluguelDataGridViewTextBoxColumn.Name = "valoraluguelDataGridViewTextBoxColumn";
+            this.valoraluguelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idadeimoveldtDataGridViewTextBoxColumn
+            // 
+            this.idadeimoveldtDataGridViewTextBoxColumn.DataPropertyName = "idade_imovel_dt";
+            this.idadeimoveldtDataGridViewTextBoxColumn.HeaderText = "Idade do imovel";
+            this.idadeimoveldtDataGridViewTextBoxColumn.Name = "idadeimoveldtDataGridViewTextBoxColumn";
+            this.idadeimoveldtDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tipoimovelDataGridViewTextBoxColumn
+            // 
+            this.tipoimovelDataGridViewTextBoxColumn.DataPropertyName = "tipo_imovel";
+            this.tipoimovelDataGridViewTextBoxColumn.HeaderText = "Tipo";
+            this.tipoimovelDataGridViewTextBoxColumn.Name = "tipoimovelDataGridViewTextBoxColumn";
+            this.tipoimovelDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // imovelBindingSource
             // 
@@ -85,7 +137,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(203, 24);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Cadastro de Imovies";
+            this.label1.Text = "Cadastro de Imoveis";
             // 
             // imovelTableAdapter
             // 
@@ -110,49 +162,6 @@
             this.btn_assc_imo_pes.Text = "Cadastrar Proprietario";
             this.btn_assc_imo_pes.UseVisualStyleBackColor = true;
             this.btn_assc_imo_pes.Click += new System.EventHandler(this.btn_assc_imo_pes_Click);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Codigo";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // decricaoDataGridViewTextBoxColumn
-            // 
-            this.decricaoDataGridViewTextBoxColumn.DataPropertyName = "decricao";
-            this.decricaoDataGridViewTextBoxColumn.HeaderText = "Decricao";
-            this.decricaoDataGridViewTextBoxColumn.Name = "decricaoDataGridViewTextBoxColumn";
-            // 
-            // enderecoDataGridViewTextBoxColumn
-            // 
-            this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "endereco";
-            this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereco";
-            this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
-            // 
-            // valorimovelDataGridViewTextBoxColumn
-            // 
-            this.valorimovelDataGridViewTextBoxColumn.DataPropertyName = "valor_imovel";
-            this.valorimovelDataGridViewTextBoxColumn.HeaderText = "Valor";
-            this.valorimovelDataGridViewTextBoxColumn.Name = "valorimovelDataGridViewTextBoxColumn";
-            // 
-            // valoraluguelDataGridViewTextBoxColumn
-            // 
-            this.valoraluguelDataGridViewTextBoxColumn.DataPropertyName = "valor_aluguel";
-            this.valoraluguelDataGridViewTextBoxColumn.HeaderText = "Valor do Aluguel";
-            this.valoraluguelDataGridViewTextBoxColumn.Name = "valoraluguelDataGridViewTextBoxColumn";
-            // 
-            // idadeimoveldtDataGridViewTextBoxColumn
-            // 
-            this.idadeimoveldtDataGridViewTextBoxColumn.DataPropertyName = "idade_imovel_dt";
-            this.idadeimoveldtDataGridViewTextBoxColumn.HeaderText = "Idade do imovel";
-            this.idadeimoveldtDataGridViewTextBoxColumn.Name = "idadeimoveldtDataGridViewTextBoxColumn";
-            // 
-            // tipoimovelDataGridViewTextBoxColumn
-            // 
-            this.tipoimovelDataGridViewTextBoxColumn.DataPropertyName = "tipo_imovel";
-            this.tipoimovelDataGridViewTextBoxColumn.HeaderText = "Tipo";
-            this.tipoimovelDataGridViewTextBoxColumn.Name = "tipoimovelDataGridViewTextBoxColumn";
             // 
             // FormImovel
             // 
