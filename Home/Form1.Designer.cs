@@ -33,9 +33,9 @@
             this.imovelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.corretorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inquilinoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.proprietarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.proprietarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,23 +64,30 @@
             // imovelToolStripMenuItem
             // 
             this.imovelToolStripMenuItem.Name = "imovelToolStripMenuItem";
-            this.imovelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.imovelToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.imovelToolStripMenuItem.Text = "Imovel";
             this.imovelToolStripMenuItem.Click += new System.EventHandler(this.imovelToolStripMenuItem_Click);
             // 
             // corretorToolStripMenuItem
             // 
             this.corretorToolStripMenuItem.Name = "corretorToolStripMenuItem";
-            this.corretorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.corretorToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.corretorToolStripMenuItem.Text = "Corretor";
             this.corretorToolStripMenuItem.Click += new System.EventHandler(this.corretorToolStripMenuItem_Click);
             // 
             // inquilinoToolStripMenuItem
             // 
             this.inquilinoToolStripMenuItem.Name = "inquilinoToolStripMenuItem";
-            this.inquilinoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.inquilinoToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.inquilinoToolStripMenuItem.Text = "Inquilino";
             this.inquilinoToolStripMenuItem.Click += new System.EventHandler(this.inquilinoToolStripMenuItem_Click);
+            // 
+            // proprietarioToolStripMenuItem
+            // 
+            this.proprietarioToolStripMenuItem.Name = "proprietarioToolStripMenuItem";
+            this.proprietarioToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.proprietarioToolStripMenuItem.Text = "Proprietario";
+            this.proprietarioToolStripMenuItem.Click += new System.EventHandler(this.proprietarioToolStripMenuItem_Click);
             // 
             // ajudaToolStripMenuItem
             // 
@@ -96,13 +103,6 @@
             this.sobreToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.sobreToolStripMenuItem.Text = "Sobre";
             // 
-            // proprietarioToolStripMenuItem
-            // 
-            this.proprietarioToolStripMenuItem.Name = "proprietarioToolStripMenuItem";
-            this.proprietarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.proprietarioToolStripMenuItem.Text = "Proprietario";
-            this.proprietarioToolStripMenuItem.Click += new System.EventHandler(this.proprietarioToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -111,7 +111,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Master Imovel";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
