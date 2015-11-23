@@ -30,16 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgv_pessoa = new System.Windows.Forms.DataGridView();
+            this.pessoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.masterimovelDataSet = new Home.masterimovelDataSet();
+            this.pessoaTableAdapter = new Home.masterimovelDataSetTableAdapters.pessoaTableAdapter();
+            this.btn_novo = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pessoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.masterimovelDataSet = new Home.masterimovelDataSet();
-            this.pessoaTableAdapter = new Home.masterimovelDataSetTableAdapters.pessoaTableAdapter();
-            this.btn_novo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pessoa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterimovelDataSet)).BeginInit();
@@ -50,6 +51,7 @@
             this.dgv_pessoa.AutoGenerateColumns = false;
             this.dgv_pessoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_pessoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
             this.nomeDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
             this.enderecoDataGridViewTextBoxColumn,
@@ -62,6 +64,37 @@
             this.dgv_pessoa.Size = new System.Drawing.Size(651, 150);
             this.dgv_pessoa.TabIndex = 0;
             this.dgv_pessoa.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
+            // 
+            // pessoaBindingSource
+            // 
+            this.pessoaBindingSource.DataMember = "pessoa";
+            this.pessoaBindingSource.DataSource = this.masterimovelDataSet;
+            // 
+            // masterimovelDataSet
+            // 
+            this.masterimovelDataSet.DataSetName = "masterimovelDataSet";
+            this.masterimovelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pessoaTableAdapter
+            // 
+            this.pessoaTableAdapter.ClearBeforeFill = true;
+            // 
+            // btn_novo
+            // 
+            this.btn_novo.Location = new System.Drawing.Point(76, 317);
+            this.btn_novo.Name = "btn_novo";
+            this.btn_novo.Size = new System.Drawing.Size(145, 23);
+            this.btn_novo.TabIndex = 1;
+            this.btn_novo.Text = "Novo";
+            this.btn_novo.UseVisualStyleBackColor = true;
+            this.btn_novo.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "id";
+            this.Column1.HeaderText = "id";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // nomeDataGridViewTextBoxColumn
             // 
@@ -99,30 +132,6 @@
             this.telefoneDataGridViewTextBoxColumn.HeaderText = "telefone";
             this.telefoneDataGridViewTextBoxColumn.Name = "telefoneDataGridViewTextBoxColumn";
             // 
-            // pessoaBindingSource
-            // 
-            this.pessoaBindingSource.DataMember = "pessoa";
-            this.pessoaBindingSource.DataSource = this.masterimovelDataSet;
-            // 
-            // masterimovelDataSet
-            // 
-            this.masterimovelDataSet.DataSetName = "masterimovelDataSet";
-            this.masterimovelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pessoaTableAdapter
-            // 
-            this.pessoaTableAdapter.ClearBeforeFill = true;
-            // 
-            // btn_novo
-            // 
-            this.btn_novo.Location = new System.Drawing.Point(76, 317);
-            this.btn_novo.Name = "btn_novo";
-            this.btn_novo.Size = new System.Drawing.Size(145, 23);
-            this.btn_novo.TabIndex = 1;
-            this.btn_novo.Text = "Novo";
-            this.btn_novo.UseVisualStyleBackColor = true;
-            this.btn_novo.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FormPessoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,6 +157,7 @@
         private System.Windows.Forms.BindingSource pessoaBindingSource;
         private masterimovelDataSetTableAdapters.pessoaTableAdapter pessoaTableAdapter;
         private System.Windows.Forms.Button btn_novo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
