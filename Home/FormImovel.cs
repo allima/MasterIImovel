@@ -12,6 +12,7 @@ namespace Home
 {
     public partial class FormImovel : Form
     {
+        int codigo = 0;
         public FormImovel()
         {
             InitializeComponent();
@@ -37,8 +38,10 @@ namespace Home
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
             // Obtem o codigo do do gride da linha selecionad pelo duplo clique.
-            int codigo = Convert.ToInt32(dgv_imovel.SelectedRows[0].Cells[0].Value.ToString());
-
+            try {
+                codigo = Convert.ToInt32(dgv_imovel.SelectedRows[0].Cells[0].Value.ToString());
+            }
+            catch (Exception) { }
             // Instancia a clesse FormeClasseManutencao enviando o codigo da classe como argumento
             FormImovelmanutencao FormImovelmanutencao = new FormImovelmanutencao(codigo);
             FormImovelmanutencao.ShowDialog(this);

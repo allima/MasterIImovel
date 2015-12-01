@@ -47,3 +47,11 @@ constraint locimovel_fk foreign key(id_imovel) references imovel(id),
 constraint locinquilino_fk foreign key(id_inquilino) references pessoa(id),
 constraint loccorretor_fk foreign key(id_corretor) references pessoa(id)
 );
+
+
+/*
+connetio ALEXANDRE-PC\SQLEXPRESS
+
+ALEXANDREDELIMA
+
+*/

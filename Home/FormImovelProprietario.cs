@@ -17,6 +17,7 @@ namespace Home
         private string operacao;
         private int codigo;
 
+
         public FormImovelProprietario()
         {
             this.operacao = "inc";
